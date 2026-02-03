@@ -69,7 +69,7 @@ const images = [
 
 const gallery = document.querySelector('.gallery');
 
-const addImages = images.map(image => {
+const galleryMarkup = images.map(image => {
     return `<li class="gallery-item">
                 <a class="gallery-link" href="${image.original}">
                     <img 
@@ -81,7 +81,7 @@ const addImages = images.map(image => {
             </li>`
 }).join('');
 
-gallery.innerHTML = addImages;
+gallery.innerHTML = galleryMarkup;
 
 new SimpleLightbox('.gallery-item a', {
     captions: true,
